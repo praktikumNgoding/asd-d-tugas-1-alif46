@@ -1,0 +1,82 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+typedef struct kompleks
+{
+ int bilangan;
+ char karakter;
+};
+
+kompleks a, b, c, d;
+
+void starter()
+{
+ 
+ a.bilangan = 2;
+ 
+ b.bilangan = 4;
+ b.karakter = 'i';
+
+ c.bilangan = 3;
+ 
+ d.bilangan = 5;
+ d.karakter = 'i';
+ cout << "a = " << a.bilangan << endl;
+ cout << "b = " << b.bilangan << b.karakter << endl;
+ cout << "c = " << c.bilangan << endl;
+ cout << "d = " << d.bilangan << d.karakter << endl;
+}
+void penambahan() {
+ cout << a.bilangan + c.bilangan << " + " << b.bilangan + d.bilangan << d.karakter << endl;}
+
+void pengurangan() {
+ cout << a.bilangan - c.bilangan << " + " << b.bilangan - d.bilangan << d.karakter << endl;}
+
+void perkalian() {
+ int h1 = (a.bilangan * c.bilangan) - (b.bilangan * d.bilangan);
+ int h2 = (a.bilangan * d.bilangan) - (b.bilangan * c.bilangan);
+ cout << h1 + h2 << d.karakter << endl;}
+ 
+void pembagian() {
+ int n, m, o, p;
+ n = ((a.bilangan * c.bilangan) + (b.bilangan * d.bilangan));
+ m = (pow(a.bilangan, 2) + pow(b.bilangan, 2));
+ o = ((b.bilangan * c.bilangan) - (a.bilangan * d.bilangan));
+ p = (pow(c.bilangan, 2) + pow(d.bilangan, 2));
+ cout << ((n / m) + (o / p)) << d.karakter << endl;}
+
+int main()
+{
+ starter();
+ int pilih;
+ do
+ {     cout << "\noperasi bilangan kompleks" << endl;
+  cout << "\nsilahkan pilih operasi : " << endl;
+  cout << "Pilih 1 untuk Penambahan" << endl;
+  cout << "Pilih 2 untuk pengurangan" << endl;
+  cout << "Pilih 3 untuk perkalian" << endl;
+  cout << "Pilih 4 untuk pembagian" << endl;
+  cout << "Pilih 5 untuk keluar" << endl;
+  cout << "silahkan pilih : "; cin >> pilih;
+
+  if (pilih == 1)
+  {penambahan();}
+
+  else if (pilih == 2)
+  {pengurangan();}
+
+  else if (pilih == 3)
+  {perkalian();}
+
+  else if (pilih == 4)
+  {pembagian();}
+
+  else if (pilih == 5)
+  {break;}
+
+  else
+  {cout << "Pilihan tida tersedia" << endl;}
+ } while (true);
+    return 0;
+}
